@@ -12,7 +12,7 @@ def is_dec_sys(out_base, in_base, num):
 def get_digits(num):
     ds = []
     for i in range(len(num)):
-        if 0 <= int(num[i]) < 10:
+        if num[i] in(str(j) for j in range(10)):
             ds.append(int(num[i]))
             continue
 
