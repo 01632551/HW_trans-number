@@ -42,10 +42,9 @@ def get_str_num(ds_d):
 # in 10-NS
 def aux_trans(out_base, num):
     translated_num = 0
-    base = out_base
     ds_up = get_digits(num)
     for i in range(len(ds_up)):
-        translated_num += ds_up[i] * (base ** (len(ds_up) -i - 1))
+        translated_num += ds_up[i] * (out_base ** (len(ds_up) -i - 1))
 
     return translated_num
 
@@ -67,8 +66,8 @@ def trans(out_base, in_base, num):
     return finally_num
 
 
-out = int(input())
-in_b = int(input())
-n = input()
+u_out_base = int(input())
+u_in_base = int(input())
+u_num = input()
 
-print(is_dec_sys(out, in_b, n))
+print(is_dec_sys(u_out_base, u_in_base, u_num))
